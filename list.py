@@ -10,9 +10,13 @@ users = [
   "Martin",
   "Per",
   "Olav",
+"Lill",
+"Julie",
+"Lise",
+"Magnus",
 ]
 
-startWeek = 34
+startWeek = 35
 ulen = len(users)
 for week in range(startWeek,52):
 

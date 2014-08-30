@@ -1,4 +1,6 @@
-#!/bin/python
+#! /usr/bin/python
+print 'Content-type: text/html\n'
+print '<style>.selected { color:#C30; font-weight:bold; }</style>'
 
 from datetime import date
 
@@ -10,16 +12,16 @@ users = [
   "Martin",
   "Per",
   "Olav",
-"Lill",
-"Julie",
-"Lise",
-"Magnus",
+  "Lill",
+  "Julie",
+  "Lise",
+  "Magnus",
 ]
 
 startWeek = 35
 ulen = len(users)
 for week in range(startWeek,52):
-
-  print("Week " + str(weekNumber)+ " - "+ users[weekNumber % ulen])
-  weekNumber+=1
-  
+  if week == weekNumber:
+    print("<span class='selected'>Week " + str(week)+ " - "+ users[week % ulen] + "</span></br>")
+  else:
+    print("<span>Week " + str(week)+ " - "+ users[week % ulen] + "</span></br>")
